@@ -1,54 +1,41 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#151f37" />
-  <meta name="color-scheme" content="light" />
-  <meta name="description" content="منصة زكرياء المحجوبي الشخصية لتعلّم اللغة الفرنسية خلال 60 يوما، مع دروس تفاعلية واختبارات وتتبع التقدم." />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="Français ZM" />
-  <link rel="manifest" href="./manifest.webmanifest" />
-  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="./assets/icon-180.png" />
-  <link rel="stylesheet" href="./assets/style.css" />
-  <title>Français 60 — زكرياء المحجوبي</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17223e">
+  <meta name="description" content="منصة زكرياء المحجوبي لتعلم اللغة الفرنسية في 60 يوما، تضم أكثر من 1900 جملة و10 تمارين تفاعلية لكل درس، مع تصحيح فوري وتبرير الأخطاء وتتبع التقدم.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Français ZM">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/icon-180.png">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>Français 60 · أكاديمية الفرنسية الشخصية — زكرياء المحجوبي</title>
 </head>
 <body>
-  <div id="app">
-    <aside class="sidebar" aria-label="التنقل الرئيسي">
-      <a class="brand" href="#dashboard" aria-label="الصفحة الرئيسية">
-        <img src="./assets/icon.svg" alt="شعار المنصة" class="brand-logo" />
-        <span class="brand-copy"><strong>Français<span class="brand-num">60</span></strong><small>رحلتك إلى الفرنسية</small></span>
-      </a>
-      <div class="nav-label">القائمة الرئيسية</div>
-      <nav class="side-nav">
-        <a href="#dashboard" data-nav="dashboard" class="side-link"><span class="nav-symbol">◫</span> لوحة التقدم</a>
-        <a href="#lessons" data-nav="lessons" class="side-link"><span class="nav-symbol">▦</span> دروس الـ 60 يوما</a>
+  <div class="app-shell" id="app">
+    <aside class="sidebar" aria-label="القائمة الرئيسية">
+      <a class="brand" href="#dashboard"><img src="./assets/icon.svg" alt="شعار Français 60"><span><strong lang="fr">Français <em>60</em></strong><small>مسارك نحو الفرنسية</small></span></a>
+      <p class="side-label">مساحة التعلّم</p>
+      <nav class="side-nav" aria-label="التنقل">
+        <a href="#dashboard" data-nav="dashboard"><span class="nav-emoji">◫</span> لوحة التقدم</a>
+        <a href="#lessons" data-nav="lessons"><span class="nav-emoji">▦</span> الدروس والتطبيقات</a>
       </nav>
-      <div class="sidebar-bottom">
-        <img class="sidebar-art" src="./assets/illustration-study.svg" alt="رسم لشخص يدرس الفرنسية" />
-        <span>«كل يوم عبارة جديدة، وكل أسبوع ثقة أكبر»</span>
-        <small>صممت خصيصا لـ زكرياء المحجوبي</small>
-      </div>
+      <div class="side-divider"></div>
+      <div class="side-mini-stat"><span>الدروس المكتملة</span><strong id="side-progress">0 / 60</strong><div class="side-progress-track"><div id="side-progress-fill"></div></div></div>
+      <div class="sidebar-end"><img src="./assets/illustration-study.svg" alt="رسم دراسة" loading="lazy"><p>Votre français grandit chaque jour.</p><small>صُنعت خصيصا لزكرياء المحجوبي</small></div>
     </aside>
-    <div class="main-shell">
-      <header class="topbar">
-        <div class="mobile-brand"><img src="./assets/icon.svg" alt="" /><span>Français <b>60</b></span></div>
-        <div class="header-breadcrumb" id="breadcrumb">مسار تعلّم الفرنسية <span> / </span> لوحة التقدم</div>
-        <div class="header-right"><span class="header-date" id="header-date"></span><span class="avatar">ZM</span></div>
-      </header>
+    <div class="work-area">
+      <header class="topbar"><div class="topbar-brand"><img src="./assets/icon.svg" alt=""><strong>Français <span>60</span></strong></div><div class="breadcrumb" id="breadcrumb">مسار التعلّم / لوحة التقدم</div><div class="topbar-end"><span id="topbar-date"></span><div class="avatar" title="زكرياء المحجوبي">ZM</div></div></header>
       <main id="main-content" tabindex="-1"></main>
-      <footer class="footer">صُنع بشغف لتعلّم الفرنسية خطوة بخطوة <span lang="fr">• Bonne continuation, Zakaria !</span></footer>
+      <footer class="footer"><span>Français 60 © 2026 · زكرياء المحجوبي</span><span>الاستمرار أهم من السرعة ✦</span></footer>
     </div>
-    <nav class="mobile-bottom" aria-label="التنقل على الهاتف">
-      <a href="#dashboard" data-nav="dashboard"><span class="mobile-nav-icon">◫</span><span>تقدّمي</span></a>
-      <a href="#lessons" data-nav="lessons"><span class="mobile-nav-icon">▦</span><span>الدروس</span></a>
-    </nav>
+    <nav class="mobile-nav" aria-label="القائمة السفلية"><a href="#dashboard" data-nav="dashboard"><span>◫</span><small>تقدّمي</small></a><a href="#lessons" data-nav="lessons"><span>▦</span><small>الدروس</small></a></nav>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
   </div>
-  <div id="toast" role="status" aria-live="polite"></div>
   <script src="./assets/lessons.js" defer></script>
   <script src="./assets/app.js" defer></script>
 </body>
