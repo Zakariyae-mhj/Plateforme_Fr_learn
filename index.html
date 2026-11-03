@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -5,38 +6,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#17223e">
   <meta name="description" content="منصة زكرياء المحجوبي لتعلم اللغة الفرنسية في 60 يوما، تضم أكثر من 1900 جملة و10 تمارين تفاعلية لكل درس، مع تصحيح فوري وتبرير الأخطاء وتتبع التقدم.">
+
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Français ZM">
   <meta name="mobile-web-app-capable" content="yes">
+
   <link rel="manifest" href="./manifest.webmanifest">
+
+  <!-- أيقونة التطبيق الخارجية: بدون تغيير -->
   <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./assets/icon-180.png">
+
   <link rel="stylesheet" href="./assets/style.css">
+
   <title>Français 60 · أكاديمية الفرنسية الشخصية — زكرياء المحجوبي</title>
+
+  <!-- تنسيق الصورة الشخصية في الشعار الداخلي فقط -->
+  <style>
+    .brand img,
+    .topbar-brand img {
+      object-fit: cover !important;
+      object-position: center 30% !important;
+      border-radius: 50% !important;
+      aspect-ratio: 1 / 1;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
+
 <body>
   <div class="app-shell" id="app">
+
     <aside class="sidebar" aria-label="القائمة الرئيسية">
-      <a class="brand" href="#dashboard"><img src="./assets/icon.svg" alt="شعار Français 60"><span><strong lang="fr">Français <em>60</em></strong><small>مسارك نحو الفرنسية</small></span></a>
+
+      <!-- الشعار الداخلي بالصورة الشخصية -->
+      <a class="brand" href="#dashboard">
+        <img
+          src="./assets/zakaria-photo.jpg"
+          alt="زكرياء المحجوبي"
+          loading="eager"
+          decoding="async"
+        >
+        <span>
+          <strong lang="fr">Français <em>60</em></strong>
+          <small>مسارك نحو الفرنسية</small>
+        </span>
+      </a>
+
       <p class="side-label">مساحة التعلّم</p>
+
       <nav class="side-nav" aria-label="التنقل">
-        <a href="#dashboard" data-nav="dashboard"><span class="nav-emoji">◫</span> لوحة التقدم</a>
-        <a href="#lessons" data-nav="lessons"><span class="nav-emoji">▦</span> الدروس والتطبيقات</a>
+        <a href="#dashboard" data-nav="dashboard">
+          <span class="nav-emoji">◫</span>
+          لوحة التقدم
+        </a>
+
+        <a href="#lessons" data-nav="lessons">
+          <span class="nav-emoji">▦</span>
+          الدروس والتطبيقات
+        </a>
       </nav>
+
       <div class="side-divider"></div>
-      <div class="side-mini-stat"><span>الدروس المكتملة</span><strong id="side-progress">0 / 60</strong><div class="side-progress-track"><div id="side-progress-fill"></div></div></div>
-      <div class="sidebar-end"><img src="./assets/illustration-study.svg" alt="رسم دراسة" loading="lazy"><p>Votre français grandit chaque jour.</p><small>صُنعت خصيصا لزكرياء المحجوبي</small></div>
+
+      <div class="side-mini-stat">
+        <span>الدروس المكتملة</span>
+        <strong id="side-progress">0 / 60</strong>
+
+        <div class="side-progress-track">
+          <div id="side-progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="sidebar-end">
+        <img
+          src="./assets/illustration-study.svg"
+          alt="رسم دراسة"
+          loading="lazy"
+        >
+        <p>Votre français grandit chaque jour.</p>
+        <small>صُنعت خصيصا لزكرياء المحجوبي</small>
+      </div>
+
     </aside>
+
     <div class="work-area">
-      <header class="topbar"><div class="topbar-brand"><img src="./assets/icon.svg" alt=""><strong>Français <span>60</span></strong></div><div class="breadcrumb" id="breadcrumb">مسار التعلّم / لوحة التقدم</div><div class="topbar-end"><span id="topbar-date"></span><div class="avatar" title="زكرياء المحجوبي">ZM</div></div></header>
+
+      <header class="topbar">
+
+        <!-- الشعار الداخلي للهاتف بالصورة الشخصية -->
+        <div class="topbar-brand">
+          <img
+            src="./assets/zakaria-photo.jpg"
+            alt="زكرياء المحجوبي"
+            loading="eager"
+            decoding="async"
+          >
+          <strong>Français <span>60</span></strong>
+        </div>
+
+        <div class="breadcrumb" id="breadcrumb">
+          مسار التعلّم / لوحة التقدم
+        </div>
+
+        <div class="topbar-end">
+          <span id="topbar-date"></span>
+          <div class="avatar" title="زكرياء المحجوبي">ZM</div>
+        </div>
+
+      </header>
+
       <main id="main-content" tabindex="-1"></main>
-      <footer class="footer"><span>Français 60 © 2026 · زكرياء المحجوبي</span><span>الاستمرار أهم من السرعة ✦</span></footer>
+
+      <footer class="footer">
+        <span>Français 60 © 2026 · زكرياء المحجوبي</span>
+        <span>الاستمرار أهم من السرعة ✦</span>
+      </footer>
+
     </div>
-    <nav class="mobile-nav" aria-label="القائمة السفلية"><a href="#dashboard" data-nav="dashboard"><span>◫</span><small>تقدّمي</small></a><a href="#lessons" data-nav="lessons"><span>▦</span><small>الدروس</small></a></nav>
-    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <nav class="mobile-nav" aria-label="القائمة السفلية">
+      <a href="#dashboard" data-nav="dashboard">
+        <span>◫</span>
+        <small>تقدّمي</small>
+      </a>
+
+      <a href="#lessons" data-nav="lessons">
+        <span>▦</span>
+        <small>الدروس</small>
+      </a>
+    </nav>
+
+    <div
+      id="toast"
+      class="toast"
+      role="status"
+      aria-live="polite">
+    </div>
+
   </div>
+
+  <!-- ملفات الدروس والبرمجة الأصلية -->
   <script src="./assets/lessons.js" defer></script>
   <script src="./assets/app.js" defer></script>
+
 </body>
 </html>
